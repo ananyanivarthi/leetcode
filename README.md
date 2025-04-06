@@ -8,12 +8,12 @@ I'm keeping things organized so I can track my progress, revisit tricky problems
 
 ## 🗂️ Folder Structure
 
-
+```
 ananyanivarthi-leetcode/
 ├── [problem-number]-[problem-title]/
 │   ├── README.md
 │   └── [solution-file].py
-
+```
 
 
 ## 🚦 How to Explore
@@ -34,5 +34,3 @@ This repo will keep growing as I solve more problems and improve older solutions
 
 Happy Leetcoding! 🧩✨  
 – Ananya
-
-Would you like me to save this as a `README.md` file and provide it to you as a download or just copy-paste into your repo?
