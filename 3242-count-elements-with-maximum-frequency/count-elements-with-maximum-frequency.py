@@ -4,7 +4,7 @@ class Solution:
         for num in nums:
             freq[num] +=1
 
-            max_freq= max(freq)
-            total = sum(count for count in freq if count == max_freq)
+        max_freq= max(freq)
+        total = sum(count for count in freq if count == max_freq)
         return total
         
