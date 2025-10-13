@@ -1,15 +1,15 @@
-from collections import Counter
 class Solution:
-    @staticmethod
-    def isanagram(a,b):
-        return Counter(a) == Counter(b)
-    def removeAnagrams(self, words: List[str]) -> List[str]:
-        stack=[]
-        for word in words:
-            if stack and self.isanagram(stack[-1],word):
-                continue
-            stack.append(word)
-        return stack
-        
+  def removeAnagrams(self, words: List[str]) -> List[str]:
+    res = []
+    prev = []
 
-        
+    for i in range(len(words)):
+      word = words[i]
+      counter = [0]*26
+      for c in word:
+        counter[ord(c)-ord('a')] += 1
+
+      if counter != prev:
+        res.append(word)
+        prev = counter
+    return res
