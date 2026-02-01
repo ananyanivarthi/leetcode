@@ -2,9 +2,9 @@ class Solution:
     def minimumCost(self, nums: List[int]) -> int:
         n = len(nums)
         min_cost = float('inf')
-        for i in range(1,n-1):
-            for j in range(i+1,n):
-                curr_cost = nums[0] + nums[i] + nums[j]
-                min_cost=min(min_cost,curr_cost)
+        right_min = nums[-1]
+        for i in range(n-2, 0, -1):
+            min_cost = min(min_cost, nums[0] + nums[i] + right_min)
+            right_min = min(right_min, nums[i])
         return min_cost
         
